@@ -1,0 +1,33 @@
+{% set version = "3.7.2" %}
+
+package:
+  name: drompa
+  version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  url: https://github.com/rnakato/DROMPA3/archive/refs/tags/v{{version}}.tar.gz
+  sha256: 48aa8a5144e190b92e1c2c53c7782723584d8e923f563a58cc2beec08822fb94
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - make
+  host:
+    - gtk2
+    - gsl
+    - samtools
+    - zlib
+    - r-base
+  run:
+    - git clone https://github.com/coherentgraphics/cpdf-binaries
+
+test:
+  commands: drompa_peakcall -h
+
+about:
+  home: https://github.com/rnakato/DROMPA3
+  license: GNU General Public License v2.0
+ 
