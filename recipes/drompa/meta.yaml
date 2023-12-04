@@ -6,6 +6,8 @@ package:
 
 build:
   number: 0
+  run_exports:
+    - {{ pin_subpackage('drompa', max_pin="x") }}
 
 source:
   url: https://github.com/rnakato/DROMPA3/archive/refs/tags/v{{version}}.tar.gz
@@ -15,8 +17,6 @@ requirements:
   build:
     - {{ compiler('c') }}
     - make
-  run_exports:
-    - {{ pin_subpackage('drompa', max_pin="x") }}
   host:
     - gtk2
     - gsl
@@ -33,4 +33,4 @@ test:
 about:
   home: https://github.com/rnakato/DROMPA3
   license: GNU General Public License v2.0
-  summary: DROMPA can be used for quality check, PCRbias filtering, normalization, peak calling, visualization and other multiple analyses of ChIP-seq data
+  summary: DROMPA can be used for multiple analyses of ChIP-seq data
