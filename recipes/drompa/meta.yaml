@@ -30,4 +30,4 @@ test:
 about:
   home: https://github.com/rnakato/DROMPA3
   license: GNU General Public License v2.0
- 
+  summary: DROMPA can be used for quality check, PCRbias filtering, normalization, peak calling, visualization and other multiple analyses of ChIP-seq data
