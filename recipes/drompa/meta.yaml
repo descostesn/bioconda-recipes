@@ -15,6 +15,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - make
+  run_exports:
+    - {{ pin_subpackage('drompa', max_pin="x") }}
   host:
     - gtk2
     - gsl
@@ -23,6 +25,7 @@ requirements:
     - r-base
   run:
     - git clone https://github.com/coherentgraphics/cpdf-binaries
+
 
 test:
   commands: drompa_peakcall -h
