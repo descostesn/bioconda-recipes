@@ -24,7 +24,6 @@ requirements:
     - zlib
     - r-base 
 
-
 test:
   commands: drompa_peakcall -h
 
