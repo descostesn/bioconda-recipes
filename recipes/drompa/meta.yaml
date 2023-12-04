@@ -1,4 +1,4 @@
-{% set version = "3.7.2" %}
+{j% set version = "3.7.2" %}
 
 package:
   name: drompa
@@ -22,9 +22,7 @@ requirements:
     - gsl
     - samtools
     - zlib
-    - r-base
-  run:
-    - git clone git@github.com:coherentgraphics/cpdf-binaries.git
+    - r-base 
 
 
 test:
